@@ -6,15 +6,19 @@
 <h4 class="text-center">Error Messages</h4>
 
 <div class="container">
-    @if (logDetails.Error != null)
+    @if (logDetails != null)
     {
-        <ol class="errmsg_ul mt-3">
-            @foreach (var item in logDetails.Error)
-            {
+        @if (logDetails.Error != null)
+        {
+            <ol class="errmsg_ul mt-3">
+                @foreach (var item in logDetails.Error)
+                {
 
-                <li data-bs-toggle="modal" data-bs-target="#exampleModal" @onclick="()=>SelectedFile(item)">@item</li>
-            }
-        </ol>
+                    <li data-bs-toggle="modal" data-bs-target="#exampleModal" @onclick="()=>SelectedFile(item)">@item</li>
+                }
+            </ol>
+        }
+
     }
 </div>
 

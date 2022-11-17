@@ -108,3 +108,85 @@ System.IO.IOException: The process cannot access the file 'C:\shinku personal\Sl
    at System.IO.File.InternalReadAllText(String path, Encoding encoding)
    at System.IO.File.ReadAllText(String path)
    at CurrencyExchange.API.Controller.LogController.DownloadLog(String fileName) in C:\shinku personal\Slovakia\WebAPI\CurrencyExchange\Controller\LogController.cs:line 65
+2022-11-17 22:33:24.279 +05:30	ERR	CurrencyExchange.API.Controller.LogController	Error in GetLogDetails
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\shinku personal\Slovakia\TestDownLoad\WebAPI\CurrencyExchange\Files\Logs\Critical'.
+   at System.IO.Enumeration.FileSystemEnumerator`1.CreateDirectoryHandle(String path, Boolean ignoreNotFound)
+   at System.IO.Enumeration.FileSystemEnumerator`1.Init()
+   at System.IO.Enumeration.FileSystemEnumerator`1..ctor(String directory, Boolean isNormalized, EnumerationOptions options)
+   at System.IO.Enumeration.FileSystemEnumerable`1..ctor(String directory, FindTransform transform, EnumerationOptions options, Boolean isNormalized)
+   at System.IO.Enumeration.FileSystemEnumerableFactory.UserFiles(String directory, String expression, EnumerationOptions options)
+   at System.IO.Directory.InternalEnumeratePaths(String path, String searchPattern, SearchTarget searchTarget, EnumerationOptions options)
+   at System.IO.Directory.GetFiles(String path, String searchPattern, EnumerationOptions enumerationOptions)
+   at System.IO.Directory.GetFiles(String path)
+   at CurrencyExchange.API.Controller.LogController.GetLogDetails() in C:\shinku personal\Slovakia\TestDownLoad\WebAPI\CurrencyExchange\Controller\LogController.cs:line 28
+2022-11-17 22:35:00.997 +05:30	ERR	CurrencyExchange.API.Controller.LogController	Error in GetLogDetails
+System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\shinku personal\Slovakia\TestDownLoad\WebAPI\CurrencyExchange\Files\Logs\Critical'.
+   at System.IO.Enumeration.FileSystemEnumerator`1.CreateDirectoryHandle(String path, Boolean ignoreNotFound)
+   at System.IO.Enumeration.FileSystemEnumerator`1.Init()
+   at System.IO.Enumeration.FileSystemEnumerator`1..ctor(String directory, Boolean isNormalized, EnumerationOptions options)
+   at System.IO.Enumeration.FileSystemEnumerable`1..ctor(String directory, FindTransform transform, EnumerationOptions options, Boolean isNormalized)
+   at System.IO.Enumeration.FileSystemEnumerableFactory.UserFiles(String directory, String expression, EnumerationOptions options)
+   at System.IO.Directory.InternalEnumeratePaths(String path, String searchPattern, SearchTarget searchTarget, EnumerationOptions options)
+   at System.IO.Directory.GetFiles(String path, String searchPattern, EnumerationOptions enumerationOptions)
+   at System.IO.Directory.GetFiles(String path)
+   at CurrencyExchange.API.Controller.LogController.GetLogDetails() in C:\shinku personal\Slovakia\TestDownLoad\WebAPI\CurrencyExchange\Controller\LogController.cs:line 28
+2022-11-17 22:36:26.114 +05:30	ERR	CurrencyExchange.API.Controller.LogController	Error in DownloadLog
+System.IO.IOException: The process cannot access the file 'C:\shinku personal\Slovakia\TestDownLoad\WebAPI\CurrencyExchange\Files\Logs\Error\Error-20221117.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+   at System.IO.StreamReader..ctor(String path, Boolean detectEncodingFromByteOrderMarks)
+   at CurrencyExchange.API.Controller.LogController.DownloadLog(String fileName) in C:\shinku personal\Slovakia\TestDownLoad\WebAPI\CurrencyExchange\Controller\LogController.cs:line 66
+2022-11-17 22:37:05.320 +05:30	ERR	CurrencyExchange.API.Controller.LogController	Error in DownloadLog
+System.IO.IOException: The process cannot access the file 'C:\shinku personal\Slovakia\TestDownLoad\WebAPI\CurrencyExchange\Files\Logs\Error\Error-20221117.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+   at System.IO.StreamReader..ctor(String path, Boolean detectEncodingFromByteOrderMarks)
+   at CurrencyExchange.API.Controller.LogController.DownloadLog(String fileName) in C:\shinku personal\Slovakia\TestDownLoad\WebAPI\CurrencyExchange\Controller\LogController.cs:line 66
+2022-11-17 22:37:46.775 +05:30	ERR	CurrencyExchange.API.Controller.LogController	Error in DownloadLog
+System.IO.IOException: The process cannot access the file 'C:\shinku personal\Slovakia\TestDownLoad\WebAPI\CurrencyExchange\Files\Logs\Error\Error-20221117.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+   at System.IO.StreamReader..ctor(String path, Boolean detectEncodingFromByteOrderMarks)
+   at CurrencyExchange.API.Controller.LogController.DownloadLog(String fileName) in C:\shinku personal\Slovakia\TestDownLoad\WebAPI\CurrencyExchange\Controller\LogController.cs:line 66
+2022-11-17 22:38:04.176 +05:30	ERR	CurrencyExchange.API.Controller.LogController	Error in DownloadLog
+System.IO.IOException: The process cannot access the file 'C:\shinku personal\Slovakia\TestDownLoad\WebAPI\CurrencyExchange\Files\Logs\Error\Error-20221117.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+   at System.IO.StreamReader..ctor(String path, Boolean detectEncodingFromByteOrderMarks)
+   at CurrencyExchange.API.Controller.LogController.DownloadLog(String fileName) in C:\shinku personal\Slovakia\TestDownLoad\WebAPI\CurrencyExchange\Controller\LogController.cs:line 66
+2022-11-17 22:38:44.204 +05:30	ERR	CurrencyExchange.API.Controller.LogController	Error in DownloadLog
+System.IO.IOException: The process cannot access the file 'C:\shinku personal\Slovakia\TestDownLoad\WebAPI\CurrencyExchange\Files\Logs\Error\Error-20221117.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+   at System.IO.StreamReader..ctor(String path, Boolean detectEncodingFromByteOrderMarks)
+   at CurrencyExchange.API.Controller.LogController.DownloadLog(String fileName) in C:\shinku personal\Slovakia\TestDownLoad\WebAPI\CurrencyExchange\Controller\LogController.cs:line 66
+2022-11-17 22:40:13.641 +05:30	ERR	CurrencyExchange.API.Controller.LogController	Error in DownloadLog
+System.IO.IOException: The process cannot access the file 'C:\shinku personal\Slovakia\TestDownLoad\WebAPI\CurrencyExchange\Files\Logs\Error\Error-20221117.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+   at System.IO.StreamReader..ctor(String path, Boolean detectEncodingFromByteOrderMarks)
+   at CurrencyExchange.API.Controller.LogController.DownloadLog(String fileName) in C:\shinku personal\Slovakia\TestDownLoad\WebAPI\CurrencyExchange\Controller\LogController.cs:line 66
