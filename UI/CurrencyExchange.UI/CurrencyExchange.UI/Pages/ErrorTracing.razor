@@ -1,0 +1,38 @@
+﻿@page "/errormessage"
+@inject IJSRuntime js
+
+<PageTitle>Counter</PageTitle>
+
+<h4 class="text-center">Error Messages</h4>
+
+<div class="container">
+    @if (logDetails.Error != null)
+    {
+        <ol class="errmsg_ul mt-3">
+            @foreach (var item in logDetails.Error)
+            {
+
+                <li data-bs-toggle="modal" data-bs-target="#exampleModal" @onclick="()=>SelectedFile(item)">@item</li>
+            }
+        </ol>
+    }
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Error Message</h1>
+                <button type="button" @onclick="DownloadErrorDetails" class="btn btn-primary"><i class="glyphicon glyphicon-download"></i></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+             <p>
+                    @ErrorMessage.Message
+             </p>
+            </div>
+        </div>
+    </div>
+</div>

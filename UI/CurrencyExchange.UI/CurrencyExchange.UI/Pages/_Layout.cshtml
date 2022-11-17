@@ -1,0 +1,95 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@namespace CurrencyExchange.UI.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <base href="~/" />
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="CurrencyExchange.UI.styles.css" rel="stylesheet" />
+    <link href="~/assets/Style.css" rel="stylesheet" />
+ 
+
+    <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
+</head>
+<body>
+    @RenderBody()
+
+    <div id="blazor-error-ui">
+        <environment include="Staging,Production">
+            An error has occurred. This application may no longer respond until reloaded.
+        </environment>
+        <environment include="Development">
+            An unhandled exception has occurred. See browser dev tools for details.
+        </environment>
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+    <script src="_framework/blazor.server.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+            crossorigin="anonymous"></script>
+    <!-- This is the glue between Blazor and Chart.js -->
+    
+
+
+<script>
+        function CreateChart(label,rates, CurrencyName) {
+
+            $('#chart').remove(); // this is my <canvas> element
+            $('.chart-container').append('<canvas id="chart"><canvas>');
+
+            const ctx = document.getElementById('chart');  
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: label,
+                    datasets: [{
+                        label: 'Currency Rate :'+CurrencyName,
+                        data: rates,
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+</script>
+
+
+<script type="text/javascript">
+
+        function DownLoadFile(mimeType, Base64String, fileName) {
+            var fileDataUrl = "data:" + mimeType + "; base64," + Base64String;
+            fetch(fileDataUrl).then(response => response.blob())
+                .then(blob => {
+                    var link = window.document.createElement("a");
+                    link.href = window.URL.createObjectURL(blob, { type: mimeType });
+                    link.download = fileName;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                });
+
+        }
+</script>
+</body>
+</html>

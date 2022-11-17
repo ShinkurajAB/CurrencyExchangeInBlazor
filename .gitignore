@@ -1,0 +1,27 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/UI/CurrencyExchange.UI/.vs
+/UI/CurrencyExchange.UI/CurrencyExchange.Service/bin/Debug/net6.0
+/UI/CurrencyExchange.UI/CurrencyExchange.Service/obj
+/UI/CurrencyExchange.UI/CurrencyExchange.UI/bin/Debug/net6.0
+/UI/CurrencyExchange.UI/CurrencyExchange.UI/obj
+/UI/CurrencyExchange.UI/CurrencyExchange.Model/bin/Debug/net6.0
+/UI/CurrencyExchange.UI/CurrencyExchange.Model/obj
+/WebAPI/CurrencyExchange/.vs
+/WebAPI/CurrencyExchange/bin
+/WebAPI/CurrencyExchange/obj
+/WebAPI/CurrencyExchange/Properties
+/WebAPI/CurrencyExchange.APIService/bin
+/WebAPI/CurrencyExchange.APIService/obj
+/WebAPI/CurrencyExchange.DataBaseContext/bin
+/WebAPI/CurrencyExchange.DataBaseContext/obj
+/WebAPI/CurrencyExchange.Model/bin
+/WebAPI/CurrencyExchange.Model/obj
+/WebAPI/CurrencyExchange.Repository/bin
+/WebAPI/CurrencyExchange.Repository/obj
+/WebAPI/CurrencyExchange.Utility/bin
+/WebAPI/CurrencyExchange.Utility/obj
+/WebAPI/SchedulerCallingConsoleApp/bin/Debug/net6.0
+/WebAPI/SchedulerCallingConsoleApp/obj

@@ -1,0 +1,40 @@
+﻿@page "/"
+@inject IJSRuntime js
+
+
+<PageTitle>Index</PageTitle>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="d-flex flex-column mt-3">
+                <select class="currency_select" disabled>
+                    <option>Euro</option>
+                </select>
+                <select class="currency_select mt-5" @onchange="(x)=>CurrencySelectionChange(x)">
+                    <option>elect Currency</option>
+                    @if (currencylist != null)
+                    {
+                        @foreach (var item in currencylist)
+                        {
+                            <option>@item.CurrencyName</option>
+                        }
+                    }
+
+                </select>
+                <br />
+                @if (LastSevenDaysGrowth != null)
+                {
+                    <h5>Last Seven Day Growth (%) :<b>@LastSevenDaysGrowth.Value.ToString("0.##")</b></h5>
+                }
+            </div>
+        </div>
+        <div class="col-lg-8 mt-3 mt-lg-0">
+            <div class="card chart-container">
+                <canvas id="chart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>

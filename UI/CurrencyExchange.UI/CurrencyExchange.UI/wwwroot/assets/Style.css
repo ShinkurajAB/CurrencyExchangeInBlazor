@@ -1,0 +1,29 @@
+﻿body {
+}
+.currency_select {
+    
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #b0b0b0;
+    border-radius: 2px;
+}
+/*.chart-container {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+}*/
+
+.errmsg_ul {
+    /* list-style: none; */
+    /* padding: 0px; */
+    margin: 64px;
+}
+.errmsg_ul li {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #f72424;
+}
+.modal-body{
+    height:450px;
+    overflow-x:scroll;
+}
