@@ -25,9 +25,16 @@
 
                 </select>
                 <br />
+
+                
                 @if (LastSevenDaysGrowth != null)
                 {
                     <h5>Last Seven Day Growth (%) :<b>@LastSevenDaysGrowth.Value.ToString("0.##")</b></h5>
+                }
+                <br />
+                @if(TodayCurrencyRate.HasValue)
+                {
+                    <h5>Today Rate :<b>@TodayCurrencyRate.Value.ToString("0.##")</b></h5>
                 }
             </div>
         </div>
