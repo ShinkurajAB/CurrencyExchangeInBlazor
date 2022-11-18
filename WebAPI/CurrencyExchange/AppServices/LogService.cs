@@ -19,6 +19,7 @@ namespace CurrencyExchange.API.AppServices
 
         private static readonly long Size_10_MB = 10 * 1024 * 1024;
         private static readonly string DefaultOutputTemplate = "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz}\t{Level:u3}\t{SourceContext}\t{Message:lj}{NewLine}{Exception}";
+        
         private static LoggerConfiguration CreateConfig(bool isDevelopment)
         {
             var loggerConfig = new LoggerConfiguration()

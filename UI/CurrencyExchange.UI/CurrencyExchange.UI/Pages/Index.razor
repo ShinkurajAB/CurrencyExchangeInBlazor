@@ -14,7 +14,7 @@
                     <option>Euro</option>
                 </select>
                 <select class="currency_select mt-5" @onchange="(x)=>CurrencySelectionChange(x)">
-                    <option>elect Currency</option>
+                    <option>Select Currency</option>
                     @if (currencylist != null)
                     {
                         @foreach (var item in currencylist)
@@ -29,12 +29,12 @@
                 
                 @if (LastSevenDaysGrowth != null)
                 {
-                    <h5>Last Seven Day Growth (%) :<b>@LastSevenDaysGrowth.Value.ToString("0.##")</b></h5>
+                    <h5>Last Seven Day Growth (%) :<b>@LastSevenDaysGrowth.Value.ToString("0.####")</b></h5>
                 }
                 <br />
                 @if(TodayCurrencyRate.HasValue)
                 {
-                    <h5>Today Rate :<b>@TodayCurrencyRate.Value.ToString("0.##")</b></h5>
+                    <h5>Today Rate :<b>@TodayCurrencyRate.Value.ToString("0.####")</b></h5>
                 }
             </div>
         </div>

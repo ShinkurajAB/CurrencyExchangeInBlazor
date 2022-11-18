@@ -80,7 +80,7 @@ namespace CurrencyExchange.APIService
                 var result = await client.GetAsync(url);
                 string apiResponse = await result.Content.ReadAsStringAsync();
 
-                //Parsing the Json Object
+                //Parsing the Json Object and get the currency Name sections
                 JObject obj = JObject.Parse(apiResponse);
                 var CurrencyDatas = obj.GetValue("rates");
 
@@ -136,8 +136,8 @@ namespace CurrencyExchange.APIService
                 // get all currency
                 List<CurrencyTableModel> CurrencyList = await currencyTableRepository.GetAllCurrency();
 
-                string passingDate = DateTime.Now.ToString("yyyy-MM-dd");
-               
+                // Get the current date and looping the last 7 days
+                string passingDate = DateTime.Now.ToString("yyyy-MM-dd");               
                 for (int j = 0; j <= 7; j++)
                 {
                     int PreviousDayCount = 0;
@@ -164,6 +164,8 @@ namespace CurrencyExchange.APIService
                     {
                         foreach(var currency in CurrencyList)
                         {
+                            // Check the Currency and rate already Exist in database
+                            // if Rate is not exist then added into database
                             var data = await rateRepository.getCurrencyRateByCurrencyIdAndCurrencyDate(currency.ID.ToString(), passingDate);
 
                             if(data==null)
