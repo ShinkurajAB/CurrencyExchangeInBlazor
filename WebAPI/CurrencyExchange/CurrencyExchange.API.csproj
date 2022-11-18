@@ -17,8 +17,4 @@
     <ProjectReference Include="..\CurrencyExchange.Utility\CurrencyExchange.Utility.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Files\logs\Critical\" />
-  </ItemGroup>
-
 </Project>
