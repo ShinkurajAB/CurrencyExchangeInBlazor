@@ -73,7 +73,8 @@ namespace CurrencyExchange.Service
                 return JsonConvert.DeserializeObject<ErrorMessageModel>(apiresponse); ;
             }
 
-            return null;
+
+            return new ErrorMessageModel { Message=apiresponse};
         }
     }
 }
