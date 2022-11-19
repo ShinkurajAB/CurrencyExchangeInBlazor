@@ -1,0 +1,10 @@
+2022-11-19 22:58:20.445 +05:30	ERR	CurrencyExchange.API.Controller.LogController	Error in DownloadLog
+System.IO.IOException: The process cannot access the file 'C:\shinku personal\Slovakia\GitDevelop\WebAPI\CurrencyExchange\Files\Logs\Debug\Debug-20221119.log' because it is being used by another process.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.StreamReader.ValidateArgsAndOpenPath(String path, Encoding encoding, Int32 bufferSize)
+   at System.IO.StreamReader..ctor(String path, Boolean detectEncodingFromByteOrderMarks)
+   at CurrencyExchange.API.Controller.LogController.DownloadLog(String fileName) in C:\shinku personal\Slovakia\GitDevelop\WebAPI\CurrencyExchange\Controller\LogController.cs:line 66
