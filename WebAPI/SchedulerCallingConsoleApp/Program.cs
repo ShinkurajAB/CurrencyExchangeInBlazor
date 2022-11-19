@@ -3,6 +3,7 @@ using System.Net.Http.Headers;
 using System.Text.Json;
 
 HttpClient client = new HttpClient();
+client.Timeout = TimeSpan.FromHours(1);
 string logsDirectory = Path.Combine(Environment.CurrentDirectory, "BaseFiles");
 string FIlePath = logsDirectory + "\\BaseFile.json";
 BaseFileHandle obj = new BaseFileHandle();
@@ -34,6 +35,7 @@ else
 
 
 // Calling Import Exchange Rate
+
 result= client.GetAsync("api/Scheduler/ImportCurrencyExchangeRate");
 message = await result.Result.Content.ReadAsStringAsync();
 
